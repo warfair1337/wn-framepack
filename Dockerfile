@@ -78,4 +78,4 @@ VOLUME /app/hf_download
 VOLUME /app/outputs
 
 EXPOSE 7860
-CMD ["python", "demo_gradio.py", "--server 0.0.0.0"]
+CMD ["python", "demo_gradio.py", "--server=0.0.0.0"]
