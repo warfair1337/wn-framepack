@@ -12,8 +12,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
     USER=appuser
 
 # Create system user and group
-RUN groupadd -g $GID appuser && \
-    useradd -u $UID -g $GID -m -s /bin/bash appuser
+# RUN groupadd -g $GID appuser && \
+RUN useradd -u $UID -g $GID -m -s /bin/bash appuser
 
 # Install dependencies as root first
 RUN apt-get update && apt-get install -y --no-install-recommends \
