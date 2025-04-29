@@ -37,7 +37,8 @@ RUN mkdir -p /app && \
 USER $UID:$GID
 
 # Clone repository
-RUN git clone https://github.com/lllyasviel/FramePack /app
+# RUN git clone https://github.com/lllyasviel/FramePack /app
+RUN git clone https://github.com/colinurbs/FramePack-Studio.git /app
 WORKDIR /app
 
 # Create virtual environment as user
@@ -78,4 +79,4 @@ VOLUME /app/hf_download
 VOLUME /app/outputs
 
 EXPOSE 7860
-CMD ["python", "demo_gradio.py", "--server=0.0.0.0"]
+CMD ["python", "studio.py", "--server=0.0.0.0"]
